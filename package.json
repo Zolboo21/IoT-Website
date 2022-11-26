@@ -1,0 +1,23 @@
+{
+  "name": "iot-website",
+  "version": "1.0.0",
+  "description": "Integreated IoT website project made with using GCP,  Nodejs, Nginx and Bootstrap etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zolboo21/IoT-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zolboo21/IoT-Website/issues"
+  },
+  "homepage": "https://github.com/Zolboo21/IoT-Website#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^4.12.1"
+  }
+}
