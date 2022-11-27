@@ -27,7 +27,7 @@
          </div>
        </div>
      </nav>
-     <!-- Showcase -->
+     <!-- zoom class for gcp -->
      <section
      class="bg-dark text-light p-5 p-lg-0 pt-lg-4 text-center text-sm-start"
    >
@@ -36,45 +36,67 @@
          <div>
            <h1>Zoom class for <span class="text-warning"> GCP </span></h1>
            <p class="lead my-4">
-            매주 수요일 오후 3~6시에 
+            매주 수요일 오후 5~8시까지
            </p>
            <button
              class="btn btn-primary btn-lg"
              data-bs-toggle="modal"
-             data-bs-target="#enrollJavascipt"
+             data-bs-target="#eGCP"
            >
              초대받기
            </button>
          </div>
          <img
            class="img-fluid d-none d-sm-block"
-           src="img/sticker.webp"
+           src="img/gcp.PNG"
            alt="IoT hand"
          />
        </div>
+       <!-- zoom class for js -->
        <div class="d-sm-flex align-items-center justify-content-between">
         <div>
-          <h1>Become part of the <span class="text-warning"> IoT Family </span></h1>
+          <h1>Zoom class for <span class="text-warning"> Javascipt </span></h1>
           <p class="lead my-4">
-           현재 줌 강의 구독하기 
+            매주 목요일 오후 3~6시까지
           </p>
           <button
             class="btn btn-primary btn-lg"
             data-bs-toggle="modal"
-            data-bs-target="#enrollArduino"
+            data-bs-target="#eJS"
           >
             구독하기
           </button>
         </div>
         <img
           class="img-fluid d-none d-sm-block"
-          src="img/sticker.webp"
+          src="img/js.PNG"
+          alt="IoT hand"
+        />
+      </div>
+             <!-- zoom class for arduino -->
+      <div class="d-sm-flex align-items-center justify-content-between">
+        <div>
+          <h1>Zoom class for <span class="text-warning"> Arduino </span></h1>
+          <p class="lead my-4">
+            매주 금요일 오전 9~12시까지
+          </p>
+          <button
+            class="btn btn-primary btn-lg"
+            data-bs-toggle="modal"
+            data-bs-target="#eArduino"
+          >
+            구독하기
+          </button>
+        </div>
+        <img
+          class="img-fluid d-none d-sm-block"
+          src="img/arduino.PNG"
           alt="IoT hand"
         />
       </div>
      </div>
    </section>
-           <!-- Modal for Ardiono-->
+           <!-- Modal for Google cloud platform-->
            <div
            class="modal fade"
            id="enrollArduino"
@@ -121,7 +143,54 @@
              </div>
            </div>
          </div>
-        <!-- Modal for Javascipts-->
+           <!-- Modal for JS-->
+           <div
+           class="modal fade"
+           id="enrollArduino"
+           tabindex="-1"
+           aria-labelledby="enrollLabel"
+           aria-hidden="true"
+         >
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="구독하기"></h5>
+                 <button
+                   type="button"
+                   class="btn-close"
+                   data-bs-dismiss="modal"
+                   aria-label="Close"
+                 ></button>
+               </div>
+               <div class="modal-body">
+                 <p class="lead">Ardioino 줌 강의 초대 받기</p>
+                 <form>
+                   <div class="mb-3">
+                     <label for="first-name" class="col-form-label">
+                       이름:
+                     </label>
+                     <input type="text" class="form-control" id="first-name" />
+                   </div>
+                   <div class="mb-3">
+                     <label for="email" class="col-form-label">줌 이메일:</label>
+                     <input type="email" class="form-control" id="email" />
+                   </div>
+                 </form>
+               </div>
+               <div class="modal-footer">
+                 <button
+                   type="button"
+                   class="btn btn-secondary"
+                   data-bs-dismiss="modal"
+                 >
+                   닫기
+                 </button>
+                 <button type="button" class="btn btn-primary">보내기</button>
+               </div>
+             </div>
+           </div>
+         </div>
+        <!-- Modal for aRDUINO-->
         <div
         class="modal fade"
         id="enrollJavascipt"
