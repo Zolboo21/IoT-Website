@@ -5,37 +5,46 @@
         <link rel="stylesheet" href="style.css">
     </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-5-strong">
+        <form class="container-fluid justify-content-start">
+          <button class="btn btn-outline-success me-2" type="button">
+            <a href="index.html" class="navbar-brand">Home으로 돌아기기</a>
+          </button>
+
+        </form>
+      </nav>
+    
     <div class="container">
-        <h1>HTML Articles</h1>
-        <div class="row">
-            <div class="col">
-                <div class="feature-img">
-                   <img src="img/profile.jpg" width="100%">
-                   <img src="img/play.png" class="play-btn">
-                </div>
-            </div>
-        </div>
-            <div class="col">
-                <div class="small-img-row">
-                    <div class="small-img">
-                        <img src="img/profile.jpg">
-                    </div>
-                    <p>asdasdasd</p>
-                </div>
-                <div class="small-img-row">
-                    <div class="small-img">
-                        <img src="img/profile.jpg">
-                    </div>
-                    <p>asdasdasd</p>
-                </div>
-                <div class="small-img-row">
-                    <div class="small-img">
-                        <img src="img/profile.jpg">
-                    </div>
-                    <p>asdasdasd</p>
-            </div>
+        <h1>온라인 강의</h1>
+
+        <div class="video-container">
+            <div class="video"><video src="img/video1.mp4" muted></video></div>
+            <div class="video"><video src="img/video2.mp4" muted></video></div>
+            <div class="video"><video src="img/video3.mp4" muted></video></div>              
+            <div class="video"><video src="img/video2.mp4" muted></video></div>
+            <div class="video"><video src="img/video3.mp4" muted></video></div>    
+            <div class="video"><video src="img/video2.mp4" muted></video></div>
+            <div class="video"><video src="img/video3.mp4" muted></video></div>              
+            <div class="video"><video src="img/video2.mp4" muted></video></div>
+            <div class="video"><video src="img/video3.mp4" muted></video></div>    
         </div>
 
+        <div class="popup-video">
+            <span>&times;</span>
+            <video src="img/video1.mp4" muted autoplay controls></video>
+        </div>
     </div>
+    <script>
+        document.querySelectorAll('.video-container video').forEach(vid => {
+           vid.onclick = () =>{
+            document.querySelector('.popup-video').style.display = 'block';
+            document.querySelector('.popup-video video').src = vid.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup-video span').onclick = () =>{
+            document.querySelector('.popup-video').style.display = 'none';
+        }
+
+    </script>
 </body>
 </html>
