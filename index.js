@@ -22,6 +22,15 @@ MongoClient.connect("mongodb+srv://zolboo21:hallym@cluster0.dfimkyo.mongodb.net/
         res.sendFile(__dirname + '/index.html')
         
     })
+    app.post('/submit', function(req, res){
+        res.send("complete..")
+        db.collection('submit').insertOne({email:req.body.Pemail}, function(err, result){
+        console.log("save complete")
+        console.log(req.body.Pemail);
+        })
+        
+        
+    })
     app.post('/add', function(req, res){
         res.send("complete..")
         db.collection('login').insertOne({email:req.body.email}, function(err, result){
