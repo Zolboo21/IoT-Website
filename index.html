@@ -24,7 +24,7 @@
           <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a href="#learn" class="nav-link">What IoT</a>
+                <a href="#learn" class="nav-link">What is IoT</a>
               </li>
               <li class="nav-item">
                 <a href="#instructors" class="nav-link">멘토를 찾으세요!</a>
@@ -54,7 +54,8 @@
           </div>
           <img
             class="img-fluid d-none d-sm-block"
-            src="img/sticker.webp"
+            src="img\sticker.webp"
+            
             alt="IoT hand"
           />
         </div>
@@ -64,19 +65,21 @@
     <!-- Newsletter -->
     
     <section class="bg-primary text-light p-5">
+      <form action="/add" method="POST"> <!-- 문제가 생긴 중.. button click시 사이트를 새로고침하려고 함 --> 
         <div class="container">
-            <form action="/submit" method="post"> <!-- 문제가 생긴 중.. button click시 사이트를 새로고침하려고 함 --> 
           <div class="d-md-flex justify-content-between align-items-center">
             <h3 class="mb-3 mb-md-0">좋은 소식 매주 듣고 싶습니까 ?</h3>
-  
             <div class="input-group news-input">
-              <input type="text" class="form-control" name="Pemail" placeholder="이메일 주소를 입력해주세요" />
-              <button class="btn btn-dark btn-lg" type="button">보내기</button>
-            </form>
+              <input type="email" class="form-control" name="Pemail" placeholder="이메일 주소를 입력해주세요" />
+              <button type="submit" class="btn btn-dark btn-lg">보내기</button>
             </div>
           </div>
         </div>
-      </section>
+      </form>
+    </section>
+
+
+
     <!-- Boxes -->
     <section class="p-5">
         <div class="container">
@@ -90,9 +93,9 @@
                   <h3 class="card-title mb-3">줌 강의</h3>
                   <p class="card-text">
                     본 강의는 줌으로 열어명에서 같이 코딩강의를 하는 강의입니다.
-                    지금 가입하면 20% 활인받을 수 있습니다 
+                    지금 가입하면 20% 할인받을 수 있습니다 
                   </p>
-                  <a href="zoom.html" class="btn btn-primary">자세히 보기</a>
+                  <a href="\zoom.html" class="btn btn-primary" class="external">자세히 보기</a>
                 </div>
               </div>
             </div>
@@ -105,9 +108,9 @@
                   <h3 class="card-title mb-3">온라인 강의</h3>
                   <p class="card-text">
                     온라인으로 압로드된 코딩 영상들을 보면서 우리가 주는 문제를 풀어보세요!
-                    지금 가입하면 20% 활인받을 수 있습니다
+                    지금 가입하면 20% 할인받을 수 있습니다
                   </p>
-                  <a href="online.html" class="btn btn-dark">자세히 보기</a>
+                  <a href="online.html" class="btn btn-dark" class="external">자세히 보기</a>
                 </div>
               </div>
             </div>
@@ -120,9 +123,9 @@
                   <h3 class="card-title mb-3">1 : 1 코딩배우기</h3>
                   <p class="card-text">
                     지역별로 코딩 경험이 풍부한 멘토랑 1 : 1 배우시곘습니까 ?
-                    지금 가입하면 20% 활인받을 수 있습니다
+                    지금 가입하면 20% 할인받을 수 있습니다
                   </p>
-                  <a href="learning.html" class="btn btn-primary">자세히 보기</a>
+                  <a href="learning.html" class="btn btn-primary" class="external">자세히 보기</a>
                 </div>
               </div>
             </div>
@@ -147,7 +150,7 @@
                     소프트웨어 및 기타 기술을 탑재하고 있으며 서로 연결된 사물을 의미하는 것으로 더 구체화되었습니다. 
                     이전에는 연결에 Wi-Fi가 주로 사용되었지만 오늘날에는 5G 및 기타 유형의 네트워크 플랫폼이 거의 모든 곳에서 빠르고 안정적으로 대량의 데이터 세트를 처리합니다.
                   </p>
-                  <a href="#" class="btn btn-light mt-3">
+                  <a href="iot.html" class="btn btn-light mt-3">
                     <i class="bi bi-chevron-right"></i> Read More
                   </a>
                 </div>
@@ -168,7 +171,7 @@
                     숙련된 IoT 엔지니어에 대한 수요는 그 어느 때보다 높았으며 향후 몇 년 동안 급격한 증가가 예상됩니다.
                     머신레어닝 또는 Artificial Intelligence, Cloud Computing등 등의 대해 알아봅시다.
                   </p>
-                  <a href="#" class="btn btn-light mt-3">
+                  <a href="iotnecessary.html" class="btn btn-light mt-3">
                     <i class="bi bi-chevron-right"></i> Read More
                   </a>
                 </div>
@@ -198,10 +201,8 @@
                         <p class="card-text">
                           Smart IoT student
                         </p>
-                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100086369269457"><i class="bi bi-facebook text-dark mx-1">Facebook</a>
+                        <a href="https://github.com/Zolboo21"><i class="bi bi-linkedin text-dark mx-1">Github</a>
                       </div>
                     </div>
                   </div>
@@ -214,9 +215,6 @@
     <footer class="p-5 bg-dark text-white text-center position-relative">
         <div class="container">
           <p class="lead">Project for Utilizing a Open Source SW Development Tools[01]</p>
-  
-          <a href="#" class="position-absolute bottom-0 end-0 p-5">
-            <i class="bi bi-arrow-up-circle h1"></i>
           </a>
         </div>
       </footer>
@@ -249,7 +247,8 @@
           </div>
     </div>
      <!-- Modal -->
-
+     
+     <form action="/sub" method="post">  <!-- 문제가 생긴 중.. button click시 사이트를 새로고침하려고 함 -->
      <div
      class="modal fade"
      id="enroll"
@@ -268,44 +267,43 @@
            aria-label="Close"
            ></button>
         </div>
-        <form action="index.html" method="post">  <!-- 문제가 생긴 중.. button click시 사이트를 새로고침하려고 함 -->
-         <div class="modal-body">
-           <p class="lead">아래 내용울 채워주시면 연락을 드릴 예정입니다</p>
-           <form>
-             <div class="mb-3">
-               <label for="first-name" class="col-form-label">
-                 이름:
-               </label>
-               <input type="text" class="form-control" id="first-name" />
-             </div>
-             <div class="mb-3">
-               <label for="last-name" class="col-form-label">학교:</label>
-               <input type="text" class="form-control" id="last-name" />
-             </div>
-             <div class="mb-3">
-               <label for="email" class="col-form-label">이메일:</label>
-               <input type="email" class="form-control" id="email" />
-             </div>
-             <div class="mb-3">
-               <label for="phone" class="col-form-label">전화번호:</label>
-               <input type="tel" class="form-control" id="phone" />
+        <div class="modal-body">
+          <p class="lead" >아래 내용울 채워주시면 연락을 드릴 예정입니다</p>
+          <form>
+            <div class="mb-3">
+              <label for="first-name" class="col-form-label"> 
+                이름:
+              </label>
+              <input type="text" class="form-control" id="first-name" name="FirstName" placeholder="홍길동" />
             </div>
-        </form>
+            <div class="mb-3">
+              <label for="last-name" class="col-form-label">학교:</label>
+              <input type="text" class="form-control" id="last-name" name="School" placeholder="한림대학교" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="col-form-label">이메일:</label>
+              <input type="email" class="form-control" id="email" name="FirstEmail" placeholder="example@gmail.com" />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="col-form-label">전화번호:</label>
+              <input type="tel" class="form-control" id="phone" name="PhoneNumber" placeholder="010-1234-5678" />
+            </div>
+          </form>
         </div>
-         <div class="modal-footer">
-           <button
-             type="button"
-             class="btn btn-secondary"
-             data-bs-dismiss="modal"
-           >
-             닫기
-           </button>
-               <button type="button" class="btn btn-primary">보내기</button>  <!-- 버튼 -->
-            </form>
-        </div>
-       </div>
-     </div>
+        <div class="modal-footer">
+          <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+          >
+          닫기
+        </button>
+        <button type="submit" class="btn btn-primary">보내기</button>  <!-- 버튼 -->
+      </div>
     </div>
+  </div>
+</div>
+</form>
     
 
    <script

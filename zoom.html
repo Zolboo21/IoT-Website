@@ -27,6 +27,7 @@
          </div>
        </div>
      </nav>
+     
      <!-- zoom class for gcp -->
      <section
      class="bg-dark text-light p-5 p-lg-0 pt-lg-4 text-center text-sm-start"
@@ -97,6 +98,7 @@
      </div>
    </section>
            <!-- Modal for Google cloud platform-->
+           <form action="/zoom" method="POST">
            <div
            class="modal fade"
            id="eGCP"
@@ -123,7 +125,7 @@
                        이름:
                      </label>
                      <input type="text" class="form-control" id="first-name" />
-                   </div>
+                    </div>
                    <div class="mb-3">
                      <label for="email" class="col-form-label">줌 이메일:</label>
                      <input type="email" class="form-control" id="email" />
@@ -138,11 +140,12 @@
                  >
                    닫기
                  </button>
-                 <button type="button" class="btn btn-primary">보내기</button>
+                 <button type="submit" class="btn btn-primary">보내기</button>
                </div>
              </div>
            </div>
          </div>
+           </form>
            <!-- Modal for JS-->
            <div
            class="modal fade"

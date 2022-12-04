@@ -76,3 +76,14 @@
 body{
     background: rgb(22, 28, 45);
 }
+
+.widget-ad::before{
+    display: block;
+    content: "aadas";
+    font-size: .5em;
+    position: relative;
+    margin-top: -30px;
+    color:rgb(51,73,95, .1);
+    letter-spacing: .05em;
+}
+
