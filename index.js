@@ -35,7 +35,7 @@ MongoClient.connect("mongodb+srv://zolboo21:hallym@cluster0.dfimkyo.mongodb.net/
         })
       })
 
-      app.post('/add', function(req, res){
+      app.post('add', function(req, res){
         db.collection('config').findOne({name: 'totalcount'}, function(err, result){
           var mycount = result.count;
           db.collection('login').insertOne( { _id : (mycount +1), email : req.body.Pemail} , function(){
@@ -68,3 +68,4 @@ MongoClient.connect("mongodb+srv://zolboo21:hallym@cluster0.dfimkyo.mongodb.net/
           });
         });
       });
+      
