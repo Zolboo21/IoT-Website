@@ -25,23 +25,23 @@ MongoClient.connect("mongodb+srv://zolboo21:hallym@cluster0.dfimkyo.mongodb.net/
         res.sendFile(__dirname + '/index.html')
         
     })
+    app.get('/index', function(req, res){
+      res.sendFile(__dirname + '/index.html')
+      
+  })
+  app.get('/sticker', function(req, res){
+    res.sendFile(__dirname + '/img/sticker.webp')
+    
+})
 
 
-
-    app.get('/list', function(req, res) {
-        db.collection('login').find().toArray(function(err, result){
-          console.log(result);
-          res.render('list.ejs', {loginfo : result})
-        })
-      })
-
-      app.post('add', function(req, res){
+      app.post('/add', function(req, res){
         db.collection('config').findOne({name: 'totalcount'}, function(err, result){
           var mycount = result.count;
           db.collection('login').insertOne( { _id : (mycount +1), email : req.body.Pemail} , function(){
             db.collection('config').updateOne({name: 'totalcount'},{ $inc:{count:1} },function(err, result){
               if(err) return console.log(err)
-              res.sendFile(__dirname +'alert.html')
+              res.sendFile(__dirname +'/alert.html')
             })  
           });
         });
@@ -52,7 +52,7 @@ MongoClient.connect("mongodb+srv://zolboo21:hallym@cluster0.dfimkyo.mongodb.net/
           db.collection('sign').insertOne( { _id : (mycount2 +1), name : req.body.FirstName, school : req.body.School, FirstEmail : req.body.FirstEmail, PhoneNumber : req.body.PhoneNumber} , function(){
             db.collection('config').updateOne({name: 'totalcount2'},{ $inc:{count2:1} },function(err, result){
               if(err) return console.log(err)
-              res.sendFile(__dirname +'alert.html')
+              res.sendFile(__dirname +'/alert.html')
             })  
           });
         });
